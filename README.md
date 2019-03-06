@@ -4,5 +4,9 @@
 
 Determines the chilly or beach weather based on user location. 
 
-Uses class based components and state to respond to data-loading events. 
-Makes use of lifecycle methods: ComponentDidMount(). 
+Uses class based components and state to respond to data-loading events.
+
+Makes use of lifecycle methods: ComponentDidMount() to load the geolocation API data. 
+
+
+
