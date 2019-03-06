@@ -8,6 +8,9 @@ class App extends Component{
             lat: null,
             errorMessage: ""
         }
+    }
+    componentDidMount(){
+        console.log("My component was rendered to the screen")
         window.navigator.geolocation.getCurrentPosition(
             position =>{
                 this.setState({lat: position.coords.latitude});
@@ -17,8 +20,10 @@ class App extends Component{
             } //failure callback
         );
     }
-
    
+    componentDidUpdate(){
+        console.log("My component did update. It rerendered!");
+    }
 
     render(){    //conditional rendering
         if (this.state.errorMessage && !this.state.lat){
