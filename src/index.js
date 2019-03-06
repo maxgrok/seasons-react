@@ -21,7 +21,7 @@ class App extends Component{
         console.log("My component did update. It rerendered!");
     }
 
-    render(){    //conditional rendering
+    renderContent(){
         if (this.state.errorMessage && !this.state.lat){
             return (
                 <div> 
@@ -34,6 +34,14 @@ class App extends Component{
         }
 
         return <Spinner message="Please accept location request" />
+    }
+
+    render(){    //conditional rendering
+        return (
+            <div>
+            {this.renderContent()}
+            </div>
+        )
     }
 }
 
