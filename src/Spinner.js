@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment, Dimmer, Loader, Image} from 'semantic-ui-react';
+import {Dimmer, Loader, Image} from 'semantic-ui-react';
 
 const Spinner = (props) =>{
     return (
@@ -13,6 +13,10 @@ const Spinner = (props) =>{
       <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
     </div>
     )
+}
+
+Spinner.defaultProps = {
+  message: "Loading..."
 }
 
 export default Spinner;
